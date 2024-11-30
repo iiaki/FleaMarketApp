@@ -1,0 +1,73 @@
+/* コンテナ全体のスタイル */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #444;
+    border-radius: 8px;
+    color: white;
+}
+
+/* タブのスタイル */
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.tabs button.active {
+    background-color: #ff5555;
+    font-weight: bold;
+}
+
+/* コンテンツ表示 */
+.tab-content {
+    display: none;
+}
+
+.tab-content:not(.hidden) {
+    display: block;
+}
+
+/* 商品一覧のスタイル */
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item {
+    background: #333;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    width: calc(33% - 20px);
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.item p {
+    margin: 10px 0 0;
+    font-size: 14px;
+}
+
+/* マイリストが空の場合のメッセージ */
+.no-items {
+    font-size: 16px;
+    color: #ff5555;
+    text-align: center;
+    margin: 20px 0;
+}

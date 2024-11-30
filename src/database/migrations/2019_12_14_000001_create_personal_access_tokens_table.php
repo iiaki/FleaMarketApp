@@ -13,6 +13,9 @@ class CreatePersonalAccessTokensTable extends Migration
      */
     public function up()
     {
+        // テーブルが存在するなら削除
+        Schema::dropIfExists('personal_access_tokens');
+
         Schema::create('personal_access_tokens', function (Blueprint $table) {
             $table->id();
             $table->morphs('tokenable');

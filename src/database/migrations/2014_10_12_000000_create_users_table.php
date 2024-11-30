@@ -13,12 +13,17 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
+        // テーブルが存在するなら削除
+        // DB::table('users')->delete();
+
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('address')->nullable(); // 住所カラム
+            $table->string('building')->nullable(); // 建物名カラム
             $table->rememberToken();
             $table->timestamps();
         });
